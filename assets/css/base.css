@@ -1,0 +1,252 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --main-color: #fb5531;
+
+    --header-height: 80px;
+    --header-nav-height: 24px;
+    --header-search-height: calc(var(--header-height)-var(var(--header-nav-height)));
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.5rem;
+    font-size: .4rem;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html a {
+    text-decoration: none;
+}
+/* Primary */
+.btn--primary{
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.fa-check{
+    color: var(--main-color);
+}
+.text-white{
+    color: white !important;
+}
+.center{
+    text-align: center !important;
+}
+/* Size */
+.fontsize-big{
+    font-size: 1.6rem !important;
+}
+/* Distance */
+.padding-2{
+    padding: 2px !important;
+}
+.padding-6l{
+    padding-left: 6px !important;
+}
+.padding-10lr{
+    padding:  0 10px !important;
+}
+.padding-10b{
+    padding-top: -px !important;
+}
+.margin-left-2{
+    margin-left: 2px !important;
+}
+.separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #fB9086;
+    height: 1.2rem;
+    top: 0;
+}
+/* Responsive */
+.grid{
+    width: 950px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid__col-2{
+    padding: 0 5px;
+    width: 16.667%;
+}
+.grid__col-10{
+    padding: 0 5px;
+    width: 83.333%;
+}
+.grid__col-12{
+    padding: 0 5px;
+    width: 100%;
+}
+.grid__col-10-5{
+    padding: 0 5px;
+    width: calc(100%/5);
+}
+.row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* Pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 30px 0 30px;
+    padding-left: 0;
+}
+.pagination a{
+    color: var(--text-color );
+}
+.pagination-item-icon{
+    opacity: 0.7;  
+}
+.pagination-item--active .pagination-item-link{
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+.pagination-item--active:hover{
+    opacity: 0.8;
+}
+.pagination-item-link{
+    padding: 4px 12px;
+    margin: 0 10px;
+}
+/* Footer */
+.footer{
+    background-color: rgb(251 251 251);  
+    border-top: 2px solid var(--main-color);  
+}
+.footer__header{
+    padding: 30px 0;
+}
+.footer__service{
+    padding: 0 5px;
+    color: rgb(107, 104, 104);
+}
+.footer__service-name{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.service-select{
+    list-style-type: none;
+    padding: 0;
+}
+.service-link{
+    margin: 10px 0;
+}
+.service-link a{
+    color: rgb(148, 143, 143);
+    margin: 10px 0;
+    zoom: 0.92;
+}
+.service-select .service-link:hover a{
+    opacity: 1;
+    color: var(--main-color);
+}
+.footer__service-img{
+    width: 100px;
+}
+.service-icon{
+    margin-right: 5px;
+}
+.footer__qr-img{
+    width: 60px;
+}
+.footer__get-app{
+    display: flex;
+}
+.footer__service-apps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 4px;
+}
+.footer__app{
+    width: 54px;
+}
+.footer__google{
+    width: 60px;
+}
+.footer__gallery{
+    width: 60px;
+}
+.footer__end{
+    border-top: 0.5px solid rgba(0,0,0,0.1);
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.footer__tilte{
+    padding: 30px 0 15px;
+    color: rgb(148, 143, 143);
+    zoom: 0.92;
+}
+.footer__decs{
+    margin-bottom: 4px;
+    padding: 0 6px;
+    color: rgb(148, 143, 143);
+}
+.footer--border{
+    border-right: 1px solid rgba(0,0,0,0.3);
+    padding-left: 5px;
+}
+.footer__company{
+    font-size: 1.8rem;
+    margin: 16px 0 6px;
+}
+.footer__content{
+    padding: 2px;
+}
+/* Modal */
+.modal{
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: fadeIn ease 0.2s;
+}
+.modal__overlay{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.modal__main{
+    width: 420px    
+}
+.modal__body{
+    position: relative;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    z-index: 100;
+    animation: grow linear .2s;
+}
+/* Animation */
+@keyframes fadeIn{
+    from{ 
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@keyframes grow{
+    from{
+        opacity: 0.5;
+        transform: scale(0);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
