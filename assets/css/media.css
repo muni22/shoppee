@@ -1,28 +1,86 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .example {background: red;}
+/*Medium PC */
+@media(min-width : 1100px) and (max-width :1250px){
+  .container__catelory{
+    margin-left: 8px;
   }
-  
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
-    .example {background: green;}
+  .product-item__favorite{
+    padding: 1px 3px;
   }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    .example {background: blue;}
-  } 
-  
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
-    .main{
-        width: 100vw;
-    }
-  } 
-  
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
-    .main{
-        width: 100vw;
-    }
-}   
+  .product-item__sale-off-label{
+    font-size: 0.9rem;
+  }
+  .product-item__sale-off::before{
+    border-left: 31.3px solid rgba(255,212,36,.9);
+    border-right: 31.3px solid rgba(255,212,36,.9);
+  }
+}     
+/* Ipad */
+@media(min-width : 790px) and (max-width : 1099px){
+  .grid__col-12-3{
+    width: calc(100%/3);
+  }
+  .header__sub{
+    display: none;
+  }
+  .product-item {
+    margin-top: 8px;
+  }
+  .container__catelory{
+    margin-left: 5px;
+  }
+  .catelory__heading{
+    font-size: 1.2rem;
+  }
+  .catelory__list li{
+    font-size: 0.9rem;
+  }
+  .footer__header{
+    padding: 32px;
+  }
+}
+/* Mobile */
+@media(max-width : 789px){
+  .grid__col-2{
+    display: none;
+  }
+  .grid__col-12{
+    width: 100%;
+  }
+  .grid__col-12-1{
+    width: 90%;
+  }
+  .grid__col-12-3-mobile{
+    width: calc(100%/3);
+  }
+  .cart__item-name{
+    max-width: 40vw;
+  }
+  .header__sub{
+    display: none;
+  }
+  .header__navbar{
+    display: none;
+  }
+  .header{
+    display: flex;
+    align-items: center;
+  }
+  .home-page{
+    width: 100px;
+  }
+  .filter__select{
+    align-self: flex-end;
+  }
+  .container__product{
+    justify-content: center;
+  }
+  .product-item {
+    margin-top: 10px;
+  }
+  .header__search-history-text{
+    display: none;
+  }
+  .footer__header{
+    padding: 30px;
+  }
+}
