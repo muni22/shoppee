@@ -705,7 +705,7 @@
 }
 .product-item__price{
     margin: 8px 0;
-    font-size: 1.1.product-item__ratingrem;
+    font-size: 1.1;
     color: var(--black-color);
 }
 .product-item__price-old{
