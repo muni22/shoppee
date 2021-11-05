@@ -37,6 +37,9 @@
   .footer__header{
     padding: 32px;
   }
+  .footer__service-img{
+    width: 120px;
+  }
 }
 /* Mobile */
 @media(max-width : 789px){
